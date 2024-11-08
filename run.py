@@ -15,7 +15,7 @@ command = [
     'java', '-jar', 'SpecialSource.jar',
     '--in-jar', input_jar,
     '--out-jar', output_jar,
-    '--read-inheritance', 'f'{version}.srg.inheritmap',
+    '--read-inheritance', f'{version}.srg.inheritmap',
     '--srg-in', f'{version}.srg'
 ]
 
