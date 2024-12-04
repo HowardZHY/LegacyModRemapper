@@ -4,7 +4,13 @@ Remap Notch code Forge/ModLoader/BaseEdit mods to SRG, one of the steps to make 
 
 However, mods using ASM or Reflections are not supported.
 
+Requires Python.
+
 # Usage:
+
+Code - Download ZIP.
+
+Extract to a folder.
 
 `run.txt`:
 
@@ -14,4 +20,4 @@ However, mods using ASM or Reflections are not supported.
 
 `Output File Name`
 
-and run run.bat
+and run `run.bat`.
