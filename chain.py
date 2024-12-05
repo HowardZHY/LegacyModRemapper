@@ -2,19 +2,24 @@
 
 # Given obf<->MCP and obf<->CB mappings, generate MCP<->CB mappings
 
-import sys, os
+import os
+import sys
 
 global verbose
+
 
 def process(filename):
     reverse = False
     if filename.startswith("^"):
         filename = filename[1:]
         reverse = True
-    f = file(filename)
-    classes_o2d = {}; classes_d2o = {}
-    fields_o2d = {}; fields_d2o = {}
-    methods_o2d = {}; methods_d2o = {}
+    f = open(filename)
+    classes_o2d = {};
+    classes_d2o = {}
+    fields_o2d = {};
+    fields_d2o = {}
+    methods_o2d = {};
+    methods_d2o = {}
     for line in f.readlines():
         line = line.strip()
         if len(line) == 0: continue
@@ -23,16 +28,16 @@ def process(filename):
         kind, argsString = line.split(": ")
         args = argsString.split(" ")
         if kind == "PK":  # package
-            continue 
-        elif kind == "CL": # class
+            continue
+        elif kind == "CL":  # class
             obfName, deobName = args
             classes_o2d[obfName] = deobName
             classes_d2o[deobName] = obfName
-        elif kind == "FD": # field
+        elif kind == "FD":  # field
             obfName, deobName = args
             fields_o2d[obfName] = deobName
             fields_d2o[deobName] = obfName
-        elif kind == "MD": # method
+        elif kind == "MD":  # method
             obfName, obfSig, deobName, deobSig = args
 
             obfKey = obfName + " " + obfSig
@@ -47,17 +52,19 @@ def process(filename):
     else:
         return {"CL": classes_d2o, "FD": fields_d2o, "MD": methods_d2o}
 
+
 # Load fields/methods.csv mapping "searge" name (func_XXX/field_XXX) to descriptive MCP name
 def loadDescriptiveNamesCSV(fn):
-    f = file(fn)
+    f = open(fn)
     d = {}
     for line in f.readlines():
-        tokens = line.split(",",3)
+        tokens = line.split(",", 3)
         if tokens[0] == "searge": continue
-        searge,name,side,desc = tokens
-        if side == "0": continue # 2=joined, 1=server-side, 0=client-side. Skip client, include server and joined
+        searge, name, side, desc = tokens
+        if side == "0": continue  # 2=joined, 1=server-side, 0=client-side. Skip client, include server and joined
         d[searge] = name
     return d
+
 
 def chain(mcpdir, cbsrg):
     if mcpdir.endswith(".srg"):
@@ -66,12 +73,12 @@ def chain(mcpdir, cbsrg):
         fields_fn = methods_fn = None
     elif mcpdir.endswith("/"):
         # also translate descriptive names through MCP's fields/methods.csv
-        mcpsrg = mcpdir + "packaged.srg"    # FML uses multi-level packages (not joined.srg)
-        #mcpsrg = mcpdir + "joined.srg"    # flat namespace
+        mcpsrg = mcpdir + "packaged.srg"  # FML uses multi-level packages (not joined.srg)
+        # mcpsrg = mcpdir + "joined.srg"    # flat namespace
         if not os.path.exists(mcpsrg):
             mcpsrg = mcpdir + "server.srg"  # old MCP with flat namespace
         if not os.path.exists(mcpsrg):
-            print "no .srg found in %s" % (mcpdir,)
+            print("no .srg found in %s" % (mcpdir,))
             raise SystemExit
 
         fields_fn = mcpdir + "fields.csv"
@@ -121,27 +128,28 @@ def chain(mcpdir, cbsrg):
 
             missing = set(mapMCP.keys()) - set(mapCB.keys())
             if len(missing) != 0 and verbose:
-                print "CB mappings missing from MCP mappings: %s" % (missing,)
+                print("CB mappings missing from MCP mappings: %s" % (missing,))
                 import pprint
-                print "=== mapMCP ==="
+                print("=== mapMCP ===")
                 pprint.pprint(mapMCP)
-                print "=== mapCB ==="
+                print("=== mapCB ===")
                 pprint.pprint(mapCB)
-                print "== missing ==="
+                print("== missing ===")
                 pprint.pprint(missing)
 
             surplus = set(mapCB.keys()) - set(mapMCP.keys())
             if len(surplus) != 0:
-               #print "CB mappings has extra mappings not in MCP: %s" % (surplus,) # no problem, probably just constructors (no rename)
-               pass
+                # print "CB mappings has extra mappings not in MCP: %s" % (surplus,)
+                # no problem, probably just constructors (no rename)
+                pass
 
         for obf in sorted(mapMCP.keys()):
             if cb is not None:
-                if not mapCB.has_key(obf) or not mapMCP.has_key(obf): continue
-
-                print "%s: %s %s" % (kind, mapCB[obf], descriptiveName(mapMCP[obf]))
+                if obf not in mapCB or obf not in mapMCP: continue
+                print("%s: %s %s" % (kind, mapCB[obf], descriptiveName(mapMCP[obf])))
             else:
-                print "%s: %s %s" % (kind, obf, descriptiveName(mapMCP[obf]))
+                print("%s: %s %s" % (kind, obf, descriptiveName(mapMCP[obf])))
+
 
 def main():
     global verbose
@@ -149,16 +157,16 @@ def main():
     verbose = False
 
     if len(sys.argv) < 3:
-        print "chain srg given obf<->MCP and obf<->CB to CB<->MCP"
-        print "Usage: %s clean-mcpdir/conf cb-server.srg [-v]" % (sys.argv[0],)
-        print "Examples:"
-        print "Translate through .srg and descriptive fields.csv/methods.csv:"
-        print "\t%s ../mcpXXX-clean/conf/ obf2cb.srg > cb2mcp.srg" % (sys.argv[0],)
-        print "\t%s ../mcpXXX-pkgd/conf/ obf2cb.srg > cb2pkgmcp.srg" % (sys.argv[0],)
-        print "Translate only through .srg, leaving indexed func_XXX/field_XXX names:"
-        print "\t%s ../mcpXXX-clean/conf/server.srg obf2cb.srg" % (sys.argv[0],)
-        print "Only extract descriptions (no chaining):"
-        print "\t%s ../mcpXXX-clean/conf/ -" % (sys.argv[0],)
+        print("chain srg given obf<->MCP and obf<->CB to CB<->MCP")
+        print("Usage: %s clean-mcpdir/conf cb-server.srg [-v]" % (sys.argv[0],))
+        print("Examples:")
+        print("Translate through .srg and descriptive fields.csv/methods.csv:")
+        print("\t%s ../mcpXXX-clean/conf/ obf2cb.srg > cb2mcp.srg" % (sys.argv[0],))
+        print("\t%s ../mcpXXX-pkgd/conf/ obf2cb.srg > cb2pkgmcp.srg" % (sys.argv[0],))
+        print("Translate only through .srg, leaving indexed func_XXX/field_XXX names:")
+        print("\t%s ../mcpXXX-clean/conf/server.srg obf2cb.srg" % (sys.argv[0],))
+        print("Only extract descriptions (no chaining):")
+        print("\t%s ../mcpXXX-clean/conf/ -" % (sys.argv[0],))
         raise SystemExit
 
     mcpdir = sys.argv[1]
@@ -167,6 +175,7 @@ def main():
     verbose = "-v" in sys.argv
 
     chain(mcpdir, cbsrg)
+
 
 if __name__ == "__main__":
     main()
