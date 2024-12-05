@@ -6,6 +6,8 @@ However, mods using ASM or Reflections are not supported.
 
 Requires Python.
 
+Inspired by https://github.com/agaricusb/MinecraftRemapping
+
 # Usage:
 
 Code - Download ZIP.
