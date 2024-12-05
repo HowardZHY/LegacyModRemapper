@@ -1160,6 +1160,10 @@ CL: nb net/minecraft/entity/EntitySelectorArmoredMob
 CL: nc net/minecraft/entity/item/EntityXPOrb
 CL: nd net/minecraft/entity/EntityFlying
 CL: ne net/minecraft/entity/EntityHanging
+CL: net/minecraft/client/ClientBrandRetriever net/minecraft/client/ClientBrandRetriever
+CL: net/minecraft/client/Minecraft net/minecraft/client/Minecraft
+CL: net/minecraft/client/MinecraftApplet net/minecraft/client/MinecraftApplet
+CL: net/minecraft/server/MinecraftServer net/minecraft/server/MinecraftServer
 CL: nf net/minecraft/entity/item/EntityItemFrame
 CL: ng net/minecraft/entity/EntityLiving
 CL: nh net/minecraft/entity/EnumCreatureType
