@@ -1,2 +1,2 @@
-py chain.py src2pkg.srg temp.srg | sort > 1.5.0.srg
+py chain.py src2pkg.srg temp.srg | sort > 1.4.7.srg
 pause

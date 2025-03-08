@@ -9,14 +9,15 @@ with open('run.txt', 'r') as file:
 version = lines[0].strip()
 input_jar = lines[1].strip()
 output_jar = lines[2].strip()
+folder = version[:2]
 
 # Construct the command
 command = [
     'java', '-jar', 'SpecialSource.jar',
     '--in-jar', input_jar,
     '--out-jar', output_jar,
-    '--read-inheritance', f'{version}.srg.inheritmap',
-    '--srg-in', f'{version}.srg'
+    '--read-inheritance', f'{folder}/{version}.srg.inheritmap',
+    '--srg-in', f'{folder}/{version}.srg'
 ]
 
 # Execute the command
