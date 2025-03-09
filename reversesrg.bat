@@ -1,2 +1,2 @@
-py reversesrg.py < 1.5/1.5.0.srg | sort > 1.5/1.5.0_reobf.srg
+py reversesrg.py < 1.4/1.4.7_src.srg | sort > 1.4/1.4.7_src_reobf.srg
 pause
