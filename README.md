@@ -4,7 +4,7 @@ Remap Notch code Forge/ModLoader/BaseEdit mods to SRG, one of the steps to make 
 
 However, mods using ASM or Reflections are not supported.
 
-Requires Python.
+Requires Python 3.
 
 Inspired by https://github.com/agaricusb/MinecraftRemapping
 
