@@ -23,3 +23,9 @@ Extract to a folder.
 `Output File Name`
 
 and run `run.bat`.
+
+# Notice:
+
+Feel free to contribute major version's Diff SRGs.
+
+If there's ver.orig.srg, then ver.srg was NOT designed for Deobf Minecraft jars, they're for Mods.

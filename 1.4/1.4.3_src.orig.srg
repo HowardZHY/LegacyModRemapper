@@ -1097,7 +1097,7 @@ CL: nx net/minecraft/src/EntityAIRestrictOpenDoor
 CL: ny net/minecraft/src/EntityAIRestrictSun
 CL: nz net/minecraft/src/EntityAIBreedSheep
 CL: o net/minecraft/src/CallableBlockLocation
-CL: oa net/minecraft/src/ContainerSheep
+CL: oa net/minecraft/src/ContainerMateAI
 CL: ob net/minecraft/src/EntityAISit
 CL: oc net/minecraft/src/EntityAICreeperSwell
 CL: od net/minecraft/src/EntityAIFollowGolem
@@ -5571,7 +5571,7 @@ FD: nz/d net/minecraft/src/EntityAIBreedSheep/field_85150_d
 FD: o/a net/minecraft/src/CallableBlockLocation/field_85067_a
 FD: o/b net/minecraft/src/CallableBlockLocation/field_85065_b
 FD: o/c net/minecraft/src/CallableBlockLocation/field_85066_c
-FD: oa/a net/minecraft/src/ContainerSheep/field_85152_a
+FD: oa/a net/minecraft/src/ContainerMateAI/field_85152_a
 FD: ob/a net/minecraft/src/EntityAISit/field_75272_a
 FD: ob/b net/minecraft/src/EntityAISit/field_75271_b
 FD: oc/a net/minecraft/src/EntityAICreeperSwell/field_75269_a
@@ -13581,7 +13581,7 @@ MD: nz/a (Loy;Loy;)I net/minecraft/src/EntityAIBreedSheep/func_85149_a (Lnet/min
 MD: nz/a (Loy;Loy;Loy;)V net/minecraft/src/EntityAIBreedSheep/func_85147_a (Lnet/minecraft/src/EntityAnimal;Lnet/minecraft/src/EntityAnimal;Lnet/minecraft/src/EntityAnimal;)V
 MD: o/a ()Ljava/lang/String; net/minecraft/src/CallableBlockLocation/func_85064_a ()Ljava/lang/String;
 MD: o/call ()Ljava/lang/Object; net/minecraft/src/CallableBlockLocation/call ()Ljava/lang/Object;
-MD: oa/a (Lqx;)Z net/minecraft/src/ContainerSheep/func_75145_c (Lnet/minecraft/src/EntityPlayer;)Z
+MD: oa/a (Lqx;)Z net/minecraft/src/ContainerMateAI/func_75145_c (Lnet/minecraft/src/EntityPlayer;)Z
 MD: ob/a ()Z net/minecraft/src/EntityAISit/func_75250_a ()Z
 MD: ob/a (Z)V net/minecraft/src/EntityAISit/func_75270_a (Z)V
 MD: ob/c ()V net/minecraft/src/EntityAISit/func_75249_e ()V
