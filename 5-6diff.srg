@@ -1,0 +1,69 @@
+CL: net/minecraft/block/BlockCloth net/minecraft/block/BlockColored
+CL: net/minecraft/client/CallableTickingScreenName net/minecraft/client/CallableParticleScreenName
+CL: net/minecraft/client/ThreadShutdown net/minecraft/client/main/MainShutdownHook
+CL: net/minecraft/client/entity/render/RenderMinecartMobSpawner net/minecraft/client/renderer/entity/RenderMinecartMobSpawner
+CL: net/minecraft/client/gui/GuiScreenCreateOnlineWorld net/minecraft/client/gui/mco/GuiScreenCreateOnlineWorld
+CL: net/minecraft/client/gui/GuiScreenResetWorld net/minecraft/client/gui/mco/GuiScreenResetWorld
+CL: net/minecraft/client/gui/TaskResetWorld net/minecraft/client/gui/mco/TaskResetWorld
+CL: net/minecraft/client/gui/TaskWorldCreation net/minecraft/client/gui/mco/TaskWorldCreation
+CL: net/minecraft/client/gui/ThreadTitleScreen net/minecraft/client/gui/RunnableTitleScreen
+CL: net/minecraft/client/mco/McoServerListINNER1 net/minecraft/client/mco/McoServerListEmptyAnon
+CL: net/minecraft/client/mco/TimerTaskMcoServerListUpdate net/minecraft/client/mco/McoServerListUpdateTask
+CL: net/minecraft/client/mco/TimerTaskMcoServerListUpdateComparator net/minecraft/client/mco/McoServerListUpdateTaskComparator
+CL: net/minecraft/client/renderer/ThreadDownloadImage net/minecraft/client/renderer/ThreadDownloadImageDataINNER1
+CL: net/minecraft/client/renderer/entity/RenderLiving net/minecraft/client/renderer/entity/RendererLivingEntity
+CL: net/minecraft/entity/EntityLiving net/minecraft/entity/EntityLivingBase
+CL: net/minecraft/entity/ai/EntityAIMoveTwardsRestriction net/minecraft/entity/ai/EntityAIMoveTowardsRestriction
+CL: net/minecraft/inventory/InventoryRepair net/minecraft/inventory/ContainerRepairINNER1
+CL: net/minecraft/inventory/SlotRepair net/minecraft/inventory/ContainerRepairINNER2
+CL: net/minecraft/logging/LogAgentINNER1 net/minecraft/logging/LogAgentEmptyAnon
+FD: net/minecraft/block/BlockCloth/field_94349_a net/minecraft/block/BlockColored/field_94349_a
+FD: net/minecraft/client/CallableTickingScreenName/field_74421_a net/minecraft/client/CallableParticleScreenName/field_90053_a
+FD: net/minecraft/client/mco/TimerTaskMcoServerListUpdate/field_98261_b net/minecraft/client/mco/McoServerListUpdateTask/field_140067_a
+FD: net/minecraft/client/mco/TimerTaskMcoServerListUpdate/field_98262_a net/minecraft/client/mco/McoServerListUpdateTask/field_140066_b
+FD: net/minecraft/client/mco/TimerTaskMcoServerListUpdateComparator/field_102024_b net/minecraft/client/mco/McoServerListUpdateTaskComparator/field_140070_a
+FD: net/minecraft/client/mco/TimerTaskMcoServerListUpdateComparator/field_102025_a net/minecraft/client/mco/McoServerListUpdateTaskComparator/field_140069_b
+FD: net/minecraft/client/renderer/ThreadDownloadImage/field_78457_c net/minecraft/client/renderer/ThreadDownloadImageDataINNER1/field_110932_a
+FD: net/minecraft/client/renderer/entity/RenderLiving/field_77045_g net/minecraft/client/renderer/entity/RendererLivingEntity/field_77045_g
+FD: net/minecraft/client/renderer/entity/RenderLiving/field_77046_h net/minecraft/client/renderer/entity/RendererLivingEntity/field_77046_h
+MD: net/minecraft/block/BlockCloth/func_71858_a (II)Lnet/minecraft/util/Icon; net/minecraft/block/BlockColored/func_71858_a (II)Lnet/minecraft/util/Icon;
+MD: net/minecraft/block/BlockCloth/func_71879_a (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V net/minecraft/block/BlockColored/func_71879_a (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+MD: net/minecraft/block/BlockCloth/func_71899_b (I)I net/minecraft/block/BlockColored/func_71899_b (I)I
+MD: net/minecraft/block/BlockCloth/func_72238_e_ (I)I net/minecraft/block/BlockColored/func_72238_e_ (I)I
+MD: net/minecraft/block/BlockCloth/func_72239_d (I)I net/minecraft/block/BlockColored/func_72239_d (I)I
+MD: net/minecraft/block/BlockCloth/func_94332_a (Lnet/minecraft/client/renderer/texture/IconRegister;)V net/minecraft/block/BlockColored/func_94332_a (Lnet/minecraft/client/renderer/texture/IconRegister;)V
+MD: net/minecraft/client/CallableTickingScreenName/call ()Ljava/lang/Object; net/minecraft/client/CallableParticleScreenName/call ()Ljava/lang/Object;
+MD: net/minecraft/client/CallableTickingScreenName/func_74420_a ()Ljava/lang/String; net/minecraft/client/CallableParticleScreenName/func_90052_a ()Ljava/lang/String;
+MD: net/minecraft/client/ThreadShutdown/run ()V net/minecraft/client/main/MainShutdownHook/run ()V
+MD: net/minecraft/client/entity/render/RenderMinecartMobSpawner/func_94144_a (Lnet/minecraft/entity/item/EntityMinecart;FLnet/minecraft/block/Block;I)V net/minecraft/client/renderer/entity/RenderMinecartMobSpawner/func_94144_a (Lnet/minecraft/entity/item/EntityMinecart;FLnet/minecraft/block/Block;I)V
+MD: net/minecraft/client/entity/render/RenderMinecartMobSpawner/func_98192_a (Lnet/minecraft/entity/ai/EntityMinecartMobSpawner;FLnet/minecraft/block/Block;I)V net/minecraft/client/renderer/entity/RenderMinecartMobSpawner/func_98192_a (Lnet/minecraft/entity/ai/EntityMinecartMobSpawner;FLnet/minecraft/block/Block;I)V
+MD: net/minecraft/client/gui/ThreadTitleScreen/run ()V net/minecraft/client/gui/RunnableTitleScreen/run ()V
+MD: net/minecraft/client/mco/TimerTaskMcoServerListUpdate/func_101018_a (Ljava/util/List;)V net/minecraft/client/mco/McoServerListUpdateTask/func_140065_a (Ljava/util/List;)V
+MD: net/minecraft/client/mco/TimerTaskMcoServerListUpdate/func_98260_a ()V net/minecraft/client/mco/McoServerListUpdateTask/func_140063_a ()V
+MD: net/minecraft/client/mco/TimerTaskMcoServerListUpdate/run ()V net/minecraft/client/mco/McoServerListUpdateTask/run ()V
+MD: net/minecraft/client/mco/TimerTaskMcoServerListUpdateComparator/compare (Ljava/lang/Object;Ljava/lang/Object;)I net/minecraft/client/mco/McoServerListUpdateTaskComparator/compare (Ljava/lang/Object;Ljava/lang/Object;)I
+MD: net/minecraft/client/mco/TimerTaskMcoServerListUpdateComparator/func_102023_a (Lnet/minecraft/client/mco/McoServer;Lnet/minecraft/client/mco/McoServer;)I net/minecraft/client/mco/McoServerListUpdateTaskComparator/func_140068_a (Lnet/minecraft/client/mco/McoServer;Lnet/minecraft/client/mco/McoServer;)I
+MD: net/minecraft/client/renderer/ThreadDownloadImage/run ()V net/minecraft/client/renderer/ThreadDownloadImageDataINNER1/run ()V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_76986_a (Lnet/minecraft/entity/Entity;DDDFF)V net/minecraft/client/renderer/entity/Render/func_76986_a (Lnet/minecraft/entity/Entity;DDDFF)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77029_c (Lnet/minecraft/entity/EntityLiving;F)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77029_c (Lnet/minecraft/entity/EntityLivingBase;F)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77030_a (Lnet/minecraft/entity/EntityLiving;FF)I net/minecraft/client/renderer/entity/RendererLivingEntity/func_77030_a (Lnet/minecraft/entity/EntityLivingBase;FF)I
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77031_a (Lnet/minecraft/entity/EntityLiving;DDDFF)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77031_a (Lnet/minecraft/entity/EntityLivingBase;DDDFF)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77032_a (Lnet/minecraft/entity/EntityLiving;IF)I net/minecraft/client/renderer/entity/RendererLivingEntity/func_77032_a (Lnet/minecraft/entity/EntityLivingBase;IF)I
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77033_b (Lnet/minecraft/entity/EntityLiving;DDD)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77033_b (Lnet/minecraft/entity/EntityLivingBase;DDD)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77034_a (FFF)F net/minecraft/client/renderer/entity/RendererLivingEntity/func_77034_a (FFF)F
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77035_b (Lnet/minecraft/entity/EntityLiving;IF)I net/minecraft/client/renderer/entity/RendererLivingEntity/func_77035_b (Lnet/minecraft/entity/EntityLivingBase;IF)I
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77036_a (Lnet/minecraft/entity/EntityLiving;FFFFFF)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77036_a (Lnet/minecraft/entity/EntityLivingBase;FFFFFF)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77037_a (Lnet/minecraft/entity/EntityLiving;)F net/minecraft/client/renderer/entity/RendererLivingEntity/func_77037_a (Lnet/minecraft/entity/EntityLivingBase;)F
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77038_a (Lnet/minecraft/entity/EntityLiving;Ljava/lang/String;DDDI)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77038_a (Lnet/minecraft/entity/EntityLivingBase;Ljava/lang/String;DDDI)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77039_a (Lnet/minecraft/entity/EntityLiving;DDD)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77039_a (Lnet/minecraft/entity/EntityLivingBase;DDD)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77040_d (Lnet/minecraft/entity/EntityLiving;F)F net/minecraft/client/renderer/entity/RendererLivingEntity/func_77040_d (Lnet/minecraft/entity/EntityLivingBase;F)F
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77041_b (Lnet/minecraft/entity/EntityLiving;F)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77041_b (Lnet/minecraft/entity/EntityLivingBase;F)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77042_a (Lnet/minecraft/client/model/ModelBase;)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77042_a (Lnet/minecraft/client/model/ModelBase;)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77043_a (Lnet/minecraft/entity/EntityLiving;FFF)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_77043_a (Lnet/minecraft/entity/EntityLivingBase;FFF)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_77044_a (Lnet/minecraft/entity/EntityLiving;F)F net/minecraft/client/renderer/entity/RendererLivingEntity/func_77044_a (Lnet/minecraft/entity/EntityLivingBase;F)F
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_82408_c (Lnet/minecraft/entity/EntityLiving;IF)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_82408_c (Lnet/minecraft/entity/EntityLivingBase;IF)V
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_85093_e (Lnet/minecraft/entity/EntityLiving;F)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_85093_e (Lnet/minecraft/entity/EntityLivingBase;F)V #C
+MD: net/minecraft/client/renderer/entity/RenderLiving/func_96449_a (Lnet/minecraft/entity/EntityLiving;DDDLjava/lang/String;FD)V net/minecraft/client/renderer/entity/RendererLivingEntity/func_96449_a (Lnet/minecraft/entity/EntityLivingBase;DDDLjava/lang/String;FD)V
+MD: net/minecraft/entity/EntityLiving/func_70624_b (Lnet/minecraft/entity/EntityLiving;)V net/minecraft/entity/EntityLiving/func_70624_b (Lnet/minecraft/entity/EntityLivingBase;)V
+MD: net/minecraft/entity/EntityLiving/func_70638_az ()Lnet/minecraft/entity/EntityLiving; net/minecraft/entity/EntityLiving/func_70638_az ()Lnet/minecraft/entity/EntityLivingBase;
+MD: net/minecraft/entity/EntityLiving/func_70643_av ()Lnet/minecraft/entity/EntityLiving; net/minecraft/entity/EntityLivingBase/func_70643_av ()Lnet/minecraft/entity/EntityLivingBase;

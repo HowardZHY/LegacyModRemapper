@@ -1,0 +1,14 @@
+CL: net/minecraft/block/TileEntityRecordPlayer net/minecraft/tileentity/TileEntityRecordPlayer
+CL: net/minecraft/dispenser/BehaviorArrowDispense net/minecraft/dispenser/DispenserBehaviorArrow
+CL: net/minecraft/dispenser/BehaviorBucketEmptyDispense net/minecraft/dispenser/DispenserBehaviorEmptyBucket
+CL: net/minecraft/dispenser/BehaviorBucketFullDispense net/minecraft/dispenser/DispenserBehaviorFilledBucket
+CL: net/minecraft/dispenser/BehaviorDispenseBoat net/minecraft/dispenser/DispenserBehaviorBoat
+CL: net/minecraft/dispenser/BehaviorDispenseFireball net/minecraft/dispenser/DispenserBehaviorFireball
+CL: net/minecraft/dispenser/BehaviorDispenseFirework net/minecraft/dispenser/DispenserBehaviorFireworks
+CL: net/minecraft/dispenser/BehaviorDispenseMinecart net/minecraft/item/BehaviorDispenseMinecart
+CL: net/minecraft/dispenser/BehaviorEggDispense net/minecraft/dispenser/DispenserBehaviorEgg
+CL: net/minecraft/dispenser/BehaviorExpBottleDispense net/minecraft/dispenser/DispenserBehaviorExperience
+CL: net/minecraft/dispenser/BehaviorMobEggDispense net/minecraft/dispenser/DispenserBehaviorMobEgg
+CL: net/minecraft/dispenser/BehaviorPotionDispense net/minecraft/dispenser/DispenserBehaviorPotion
+CL: net/minecraft/dispenser/BehaviorPotionDispenseLogic net/minecraft/dispenser/DispenserBehaviorPotionProjectile
+CL: net/minecraft/dispenser/BehaviorSnowballDispense net/minecraft/dispenser/DispenserBehaviorSnowball
