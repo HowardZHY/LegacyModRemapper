@@ -1095,7 +1095,7 @@ CL: nv net/minecraft/entity/ai/EntityAIWander
 CL: nw net/minecraft/entity/ai/EntityAIArrowAttack
 CL: nx net/minecraft/entity/ai/EntityAIRestrictOpenDoor
 CL: ny net/minecraft/entity/ai/EntityAIRestrictSun
-CL: nz net/minecraft/src/EntityAIBreedSheep
+CL: nz net/minecraft/entity/ai/EntityAIBreedSheep
 CL: o net/minecraft/crash/CallableBlockLocation
 CL: oa net/minecraft/entity/passive/ContainerSheep
 CL: ob net/minecraft/entity/ai/EntityAISit
@@ -5567,7 +5567,7 @@ FD: nw/h net/minecraft/entity/ai/EntityAIArrowAttack/field_82642_h
 FD: nx/a net/minecraft/entity/ai/EntityAIRestrictOpenDoor/field_75275_a
 FD: nx/b net/minecraft/entity/ai/EntityAIRestrictOpenDoor/field_75274_b
 FD: ny/a net/minecraft/entity/ai/EntityAIRestrictSun/field_75273_a
-FD: nz/d net/minecraft/src/EntityAIBreedSheep/field_85150_d
+FD: nz/d net/minecraft/entity/ai/EntityAIBreedSheep/field_85150_d
 FD: o/a net/minecraft/crash/CallableBlockLocation/field_85067_a
 FD: o/b net/minecraft/crash/CallableBlockLocation/field_85065_b
 FD: o/c net/minecraft/crash/CallableBlockLocation/field_85066_c
@@ -13576,9 +13576,9 @@ MD: nx/e ()V net/minecraft/entity/ai/EntityAIRestrictOpenDoor/func_75246_d ()V
 MD: ny/a ()Z net/minecraft/entity/ai/EntityAIRestrictSun/func_75250_a ()Z
 MD: ny/c ()V net/minecraft/entity/ai/EntityAIRestrictSun/func_75249_e ()V
 MD: ny/d ()V net/minecraft/entity/ai/EntityAIRestrictSun/func_75251_c ()V
-MD: nz/a (Loy;)I net/minecraft/src/EntityAIBreedSheep/func_85148_a (Lnet/minecraft/entity/passive/EntityAnimal;)I
-MD: nz/a (Loy;Loy;)I net/minecraft/src/EntityAIBreedSheep/func_85149_a (Lnet/minecraft/entity/passive/EntityAnimal;Lnet/minecraft/entity/passive/EntityAnimal;)I
-MD: nz/a (Loy;Loy;Loy;)V net/minecraft/src/EntityAIBreedSheep/func_85147_a (Lnet/minecraft/entity/passive/EntityAnimal;Lnet/minecraft/entity/passive/EntityAnimal;Lnet/minecraft/entity/passive/EntityAnimal;)V
+MD: nz/a (Loy;)I net/minecraft/entity/ai/EntityAIBreedSheep/func_85148_a (Lnet/minecraft/entity/passive/EntityAnimal;)I
+MD: nz/a (Loy;Loy;)I net/minecraft/entity/ai/EntityAIBreedSheep/func_85149_a (Lnet/minecraft/entity/passive/EntityAnimal;Lnet/minecraft/entity/passive/EntityAnimal;)I
+MD: nz/a (Loy;Loy;Loy;)V net/minecraft/entity/ai/EntityAIBreedSheep/func_85147_a (Lnet/minecraft/entity/passive/EntityAnimal;Lnet/minecraft/entity/passive/EntityAnimal;Lnet/minecraft/entity/passive/EntityAnimal;)V
 MD: o/a ()Ljava/lang/String; net/minecraft/crash/CallableBlockLocation/func_85064_a ()Ljava/lang/String;
 MD: o/call ()Ljava/lang/Object; net/minecraft/crash/CallableBlockLocation/call ()Ljava/lang/Object;
 MD: oa/a (Lqx;)Z net/minecraft/entity/passive/ContainerSheep/func_75145_c (Lnet/minecraft/entity/player/EntityPlayer;)Z

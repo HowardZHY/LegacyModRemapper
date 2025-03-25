@@ -742,7 +742,7 @@ net/minecraft/server/gui/PlayerListBox net/minecraft/server/gui/IUpdatePlayerLis
 net/minecraft/server/integrated/IntegratedPlayerList net/minecraft/server/management/ServerConfigurationManager
 net/minecraft/server/integrated/IntegratedServer net/minecraft/server/MinecraftServer
 net/minecraft/server/integrated/IntegratedServerListenThread net/minecraft/network/NetworkListenThread
-net/minecraft/src/EntityAIBreedSheep net/minecraft/entity/ai/EntityAIMate
+net/minecraft/entity/ai/EntityAIBreedSheep net/minecraft/entity/ai/EntityAIMate
 net/minecraft/stats/Achievement net/minecraft/stats/StatBase
 net/minecraft/stats/StatBasic net/minecraft/stats/StatBase
 net/minecraft/stats/StatCrafting net/minecraft/stats/StatBase
