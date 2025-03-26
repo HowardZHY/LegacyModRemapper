@@ -1020,4 +1020,3 @@ net/minecraft/world/storage/MapData net/minecraft/world/WorldSavedData
 net/minecraft/world/storage/SaveFormatOld net/minecraft/world/storage/ISaveFormat
 net/minecraft/world/storage/SaveHandler net/minecraft/world/storage/ISaveHandler net/minecraft/world/storage/IPlayerFileData
 net/minecraft/world/storage/SaveHandlerMP net/minecraft/world/storage/ISaveHandler
-
