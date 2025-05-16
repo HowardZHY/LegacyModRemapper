@@ -9,7 +9,7 @@ with open('run.txt', 'r') as file:
 version = lines[0].strip()
 input_jar = lines[1].strip()
 output_jar = lines[2].strip()
-folder = version[:2]
+folder = version[:3]
 
 # Construct the command
 command = [
